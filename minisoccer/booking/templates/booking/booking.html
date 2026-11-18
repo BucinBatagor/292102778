@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block title %}Form Booking Lapangan{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="mb-6">
+        <h1 class="text-3xl font-bold text-gray-800">Form Pemesanan Lapangan</h1>
+        <p class="text-gray-600 mt-1">Lengkapi data di bawah ini untuk mengamankan jadwal bermain Anda.</p>
+    </div>
+
+    {% if messages %}
+        {% for message in messages %}
+        <div class="mb-6 p-4 rounded-lg bg-green-100 border border-green-400 text-green-800 font-medium">
+            {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden">
+        <div class="bg-green-700 text-white px-6 py-4 font-semibold">
+            Detail Booking
+        </div>
+
+        <form method="POST" class="p-6 space-y-5">
+            {% csrf_token %}
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Pilih Lapangan</label>
+                <select name="lapangan_id" id="lapangan_select" required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-green-600 focus:outline-none">
+                    {% for lap in lapangan_list %}
+                    <option value="{{ lap.id }}"
+                        data-harga="{% if tarif_terpilih and lap.id == lapangan_terpilih.id %}{{ tarif_terpilih.harga_per_jam }}{% else %}{{ lap.harga|floatformat:0 }}{% endif %}"
+                        {% if lapangan_terpilih and lap.id == lapangan_terpilih.id %}selected{% endif %}>
+                        {{ lap.nama }} ({{ lap.get_jenis_display }})
+                    </option>
+                    {% endfor %}
+                </select>
+                {% if tarif_terpilih %}
+                <p class="text-xs text-green-700 mt-1 font-medium">
+                    *Tarif aktif: {{ tarif_terpilih.get_jenis_hari_display }} ({{ tarif_terpilih.jam_mulai|time:"H:i" }} - {{ tarif_terpilih.jam_selesai|time:"H:i" }}) — Rp {{ tarif_terpilih.harga_per_jam|floatformat:0 }}/jam
+                </p>
+                {% endif %}
+            </div>
+
+            <!-- Data Pemesan -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Pemesan / Tim</label>
+                    <input type="text" name="nama_pemesan" required placeholder="Contoh: Budi / Garuda FC"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nomor WhatsApp</label>
+                    <input type="tel" name="no_hp" required placeholder="08123456789"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Jadwal Main -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Main</label>
+                    <input type="date" name="tanggal_booking" required
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Jam Mulai</label>
+                    <input type="time" name="jam_mulai" required
+                        value="{% if tarif_terpilih %}{{ tarif_terpilih.jam_mulai|time:'H:i' }}{% endif %}"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Durasi (Jam)</label>
+                    <input type="number" name="durasi" id="durasi_input" min="1" max="12" value="1" required
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none">
+                </div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 flex items-center justify-between">
+                <span class="text-sm font-semibold text-gray-600">Estimasi Total Pembayaran:</span>
+                <span id="total_harga_display" class="text-xl font-bold text-green-700">Rp 0</span>
+            </div>
+            <div class="flex items-center justify-end gap-3 pt-2">
+                <a href="{% url 'pilih_lapangan' %}" class="px-4 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 text-sm font-semibold transition">
+                    Batal
+                </a>
+                <button type="submit" class="bg-green-700 hover:bg-green-800 text-white px-6 py-2.5 rounded-lg text-sm font-semibold shadow transition">
+                    Konfirmasi Booking
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Script Kalkulasi Harga Otomatis -->
+<script>
+    const lapanganSelect = document.getElementById('lapangan_select');
+    const durasiInput = document.getElementById('durasi_input');
+    const totalDisplay = document.getElementById('total_harga_display');
+
+    function hitungTotal() {
+        const selectedOption = lapanganSelect.options[lapanganSelect.selectedIndex];
+        const hargaPerJam = parseFloat(selectedOption.getAttribute('data-harga')) || 0;
+        const durasi = parseInt(durasiInput.value) || 1;
+        const total = hargaPerJam * durasi;
+
+        totalDisplay.textContent = 'Rp ' + total.toLocaleString('id-ID');
+    }
+
+    lapanganSelect.addEventListener('change', hitungTotal);
+    durasiInput.addEventListener('input', hitungTotal);
+    window.addEventListener('DOMContentLoaded', hitungTotal);
+</script>
+{% endblock %}

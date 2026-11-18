@@ -1,0 +1,768 @@
+[
+{
+  "model": "booking.lapangan",
+  "pk": 1,
+  "fields": {
+    "nama": "Mini Soccer A",
+    "gambar": "lapangan/old_trafford.jpg",
+    "jenis": "sintetis",
+    "harga": "150000.00",
+    "status": "tersedia",
+    "lokasi": "Jl. Adisucipto No. 10, Pontianak",
+    "ukuran": "40 x 20 meter",
+    "kapasitas": "10-14 pemain",
+    "deskripsi": "Lapangan mini soccer dengan rumput sintetis berkualitas untuk permainan bersama keluarga, komunitas, dan perusahaan.",
+    "jam_operasional": "08.00 - 23.00",
+    "fasilitas": [
+      "Rumput sintesis",
+      "Lampu penerangan",
+      "Toilet",
+      "Area parkir"
+    ],
+    "created_at": "2026-11-16T11:01:08.447Z",
+    "updated_at": "2026-11-16T11:08:16.387Z"
+  }
+},
+{
+  "model": "booking.lapangan",
+  "pk": 2,
+  "fields": {
+    "nama": "Mini Soccer B",
+    "gambar": "lapangan/anfield.jpg",
+    "jenis": "sintetis",
+    "harga": "175000.00",
+    "status": "tersedia",
+    "lokasi": "Jl. Adisucipto No. 10, Pontianak",
+    "ukuran": "42 x 22 meter",
+    "kapasitas": "10-14 pemain",
+    "deskripsi": "Lapangan sintetis dengan area permainan yang lebih luas dan fasilitas pendukung yang nyaman.",
+    "jam_operasional": "08.00 - 23.00",
+    "fasilitas": [
+      "Rumput sintesis",
+      "Lampu penerangan",
+      "Ruang ganti",
+      "Toilet",
+      "Area parkir",
+      "Kantin"
+    ],
+    "created_at": "2026-11-16T11:01:08.468Z",
+    "updated_at": "2026-11-16T11:08:16.389Z"
+  }
+},
+{
+  "model": "booking.lapangan",
+  "pk": 3,
+  "fields": {
+    "nama": "Mini Soccer VIP",
+    "gambar": "lapangan/etihad.jpg",
+    "jenis": "premium",
+    "harga": "250000.00",
+    "status": "tersedia",
+    "lokasi": "Jl. Adisucipto No. 10, Pontianak",
+    "ukuran": "45 x 25 meter",
+    "kapasitas": "12-16 pemain",
+    "deskripsi": "Lapangan premium dengan fasilitas lengkap yang cocok untuk pertandingan komunitas, turnamen, dan kegiatan perusahaan.",
+    "jam_operasional": "08.00 - 24.00",
+    "fasilitas": [
+      "Rumput sintesis",
+      "Lampu penerangan",
+      "Ruang ganti",
+      "Toilet",
+      "Area parkir",
+      "Kantin"
+    ],
+    "created_at": "2026-11-16T11:01:08.481Z",
+    "updated_at": "2026-11-16T11:08:16.390Z"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 1,
+  "fields": {
+    "lapangan": 1,
+    "hari": "Senin",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 2,
+  "fields": {
+    "lapangan": 1,
+    "hari": "Selasa",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 3,
+  "fields": {
+    "lapangan": 1,
+    "hari": "Rabu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 4,
+  "fields": {
+    "lapangan": 1,
+    "hari": "Kamis",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 5,
+  "fields": {
+    "lapangan": 1,
+    "hari": "Jumat",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 6,
+  "fields": {
+    "lapangan": 1,
+    "hari": "Sabtu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 7,
+  "fields": {
+    "lapangan": 1,
+    "hari": "Minggu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 8,
+  "fields": {
+    "lapangan": 2,
+    "hari": "Senin",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 9,
+  "fields": {
+    "lapangan": 2,
+    "hari": "Selasa",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 10,
+  "fields": {
+    "lapangan": 2,
+    "hari": "Rabu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 11,
+  "fields": {
+    "lapangan": 2,
+    "hari": "Kamis",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 12,
+  "fields": {
+    "lapangan": 2,
+    "hari": "Jumat",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 13,
+  "fields": {
+    "lapangan": 2,
+    "hari": "Sabtu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 14,
+  "fields": {
+    "lapangan": 2,
+    "hari": "Minggu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "23:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 15,
+  "fields": {
+    "lapangan": 3,
+    "hari": "Senin",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "00:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 16,
+  "fields": {
+    "lapangan": 3,
+    "hari": "Selasa",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "00:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 17,
+  "fields": {
+    "lapangan": 3,
+    "hari": "Rabu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "00:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 18,
+  "fields": {
+    "lapangan": 3,
+    "hari": "Kamis",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "00:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 19,
+  "fields": {
+    "lapangan": 3,
+    "hari": "Jumat",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "00:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 20,
+  "fields": {
+    "lapangan": 3,
+    "hari": "Sabtu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "00:00:00"
+  }
+},
+{
+  "model": "booking.jadwal",
+  "pk": 21,
+  "fields": {
+    "lapangan": 3,
+    "hari": "Minggu",
+    "jam_buka": "08:00:00",
+    "jam_tutup": "00:00:00"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 1,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "06:00:00",
+    "jam_selesai": "09:00:00",
+    "harga_per_jam": "450000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 2,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "09:00:00",
+    "jam_selesai": "15:00:00",
+    "harga_per_jam": "350000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 3,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "15:00:00",
+    "jam_selesai": "16:00:00",
+    "harga_per_jam": "450000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 4,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "16:00:00",
+    "jam_selesai": "18:00:00",
+    "harga_per_jam": "600000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 5,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "18:00:00",
+    "jam_selesai": "23:00:00",
+    "harga_per_jam": "750000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 6,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "23:00:00",
+    "jam_selesai": "00:00:00",
+    "harga_per_jam": "550000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 7,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "06:00:00",
+    "jam_selesai": "09:00:00",
+    "harga_per_jam": "550000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 8,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "09:00:00",
+    "jam_selesai": "15:00:00",
+    "harga_per_jam": "450000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 9,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "15:00:00",
+    "jam_selesai": "16:00:00",
+    "harga_per_jam": "550000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 10,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "16:00:00",
+    "jam_selesai": "18:00:00",
+    "harga_per_jam": "700000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 11,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "18:00:00",
+    "jam_selesai": "23:00:00",
+    "harga_per_jam": "850000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 12,
+  "fields": {
+    "lapangan": 1,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "23:00:00",
+    "jam_selesai": "00:00:00",
+    "harga_per_jam": "650000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 13,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "06:00:00",
+    "jam_selesai": "09:00:00",
+    "harga_per_jam": "500000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 14,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "09:00:00",
+    "jam_selesai": "15:00:00",
+    "harga_per_jam": "400000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 15,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "15:00:00",
+    "jam_selesai": "16:00:00",
+    "harga_per_jam": "500000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 16,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "16:00:00",
+    "jam_selesai": "18:00:00",
+    "harga_per_jam": "650000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 17,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "18:00:00",
+    "jam_selesai": "23:00:00",
+    "harga_per_jam": "800000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 18,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "23:00:00",
+    "jam_selesai": "00:00:00",
+    "harga_per_jam": "600000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 19,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "06:00:00",
+    "jam_selesai": "09:00:00",
+    "harga_per_jam": "600000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 20,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "09:00:00",
+    "jam_selesai": "15:00:00",
+    "harga_per_jam": "500000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 21,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "15:00:00",
+    "jam_selesai": "16:00:00",
+    "harga_per_jam": "600000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 22,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "16:00:00",
+    "jam_selesai": "18:00:00",
+    "harga_per_jam": "750000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 23,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "18:00:00",
+    "jam_selesai": "23:00:00",
+    "harga_per_jam": "900000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 24,
+  "fields": {
+    "lapangan": 2,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "23:00:00",
+    "jam_selesai": "00:00:00",
+    "harga_per_jam": "700000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 25,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "06:00:00",
+    "jam_selesai": "09:00:00",
+    "harga_per_jam": "600000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 26,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "09:00:00",
+    "jam_selesai": "15:00:00",
+    "harga_per_jam": "500000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 27,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "15:00:00",
+    "jam_selesai": "16:00:00",
+    "harga_per_jam": "600000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 28,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "16:00:00",
+    "jam_selesai": "18:00:00",
+    "harga_per_jam": "750000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 29,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "18:00:00",
+    "jam_selesai": "23:00:00",
+    "harga_per_jam": "900000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 30,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "KERJA",
+    "jam_mulai": "23:00:00",
+    "jam_selesai": "00:00:00",
+    "harga_per_jam": "700000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 31,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "06:00:00",
+    "jam_selesai": "09:00:00",
+    "harga_per_jam": "700000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 32,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "09:00:00",
+    "jam_selesai": "15:00:00",
+    "harga_per_jam": "600000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 33,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "15:00:00",
+    "jam_selesai": "16:00:00",
+    "harga_per_jam": "700000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 34,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "16:00:00",
+    "jam_selesai": "18:00:00",
+    "harga_per_jam": "850000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 35,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "18:00:00",
+    "jam_selesai": "23:00:00",
+    "harga_per_jam": "1000000"
+  }
+},
+{
+  "model": "booking.tarifsewa",
+  "pk": 36,
+  "fields": {
+    "lapangan": 3,
+    "jenis_hari": "AKHIR_PEKAN",
+    "jam_mulai": "23:00:00",
+    "jam_selesai": "00:00:00",
+    "harga_per_jam": "800000"
+  }
+},
+{
+  "model": "barang.barang",
+  "pk": 1,
+  "fields": {
+    "kode_barang": "BRG001",
+    "nama_barang": "Pulpen Standard",
+    "kategori": "Alat Tulis Kantor",
+    "stok": 120,
+    "harga_beli": "2500.00",
+    "harga_jual": "3500.00",
+    "dibuat_pada": "2026-11-16T10:58:45.282Z",
+    "terakhir_diubah": "2026-11-16T10:58:45.282Z"
+  }
+},
+{
+  "model": "barang.barang",
+  "pk": 2,
+  "fields": {
+    "kode_barang": "BRG002",
+    "nama_barang": "Buku Tulis Sidu",
+    "kategori": "Alat Tulis Kantor",
+    "stok": 200,
+    "harga_beli": "4000.00",
+    "harga_jual": "5500.00",
+    "dibuat_pada": "2026-11-16T10:58:45.286Z",
+    "terakhir_diubah": "2026-11-16T10:58:45.287Z"
+  }
+},
+{
+  "model": "barang.barang",
+  "pk": 3,
+  "fields": {
+    "kode_barang": "BRG003",
+    "nama_barang": "Laptop Lenovo ThinkPad",
+    "kategori": "Elektronik",
+    "stok": 5,
+    "harga_beli": "1000000.00",
+    "harga_jual": "1250000.00",
+    "dibuat_pada": "2026-11-16T10:58:45.289Z",
+    "terakhir_diubah": "2026-11-16T10:58:45.289Z"
+  }
+},
+{
+  "model": "barang.barang",
+  "pk": 4,
+  "fields": {
+    "kode_barang": "BRG004",
+    "nama_barang": "Printer Epson L3210",
+    "kategori": "Elektronik",
+    "stok": 3,
+    "harga_beli": "230000.00",
+    "harga_jual": "285000.00",
+    "dibuat_pada": "2026-11-16T10:58:45.292Z",
+    "terakhir_diubah": "2026-11-16T10:58:45.292Z"
+  }
+},
+{
+  "model": "barang.barang",
+  "pk": 5,
+  "fields": {
+    "kode_barang": "BRG005",
+    "nama_barang": "Meja Kerja Kayu",
+    "kategori": "Mebel",
+    "stok": 10,
+    "harga_beli": "750000.00",
+    "harga_jual": "950000.00",
+    "dibuat_pada": "2026-11-16T10:58:45.294Z",
+    "terakhir_diubah": "2026-11-16T10:58:45.294Z"
+  }
+},
+{
+  "model": "barang.barang",
+  "pk": 6,
+  "fields": {
+    "kode_barang": "BRG006",
+    "nama_barang": "Kursi Kantor",
+    "kategori": "Mebel",
+    "stok": 15,
+    "harga_beli": "600000.00",
+    "harga_jual": "750000.00",
+    "dibuat_pada": "2026-11-16T10:58:45.296Z",
+    "terakhir_diubah": "2026-11-16T10:58:45.296Z"
+  }
+}
+]

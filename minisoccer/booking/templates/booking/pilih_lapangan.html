@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Pilih Lapangan - Mini Soccer Cooper
+{% endblock %}
+
+{% block content %}
+<div class="max-w-5xl xl:max-w-5xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2">
+        Pilih Lapangan
+    </h1>
+
+    <p class="text-gray-600 mb-6">
+        Silakan pilih salah satu lapangan untuk melihat jadwal operasional dan tarif.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {% for lapangan in lapangan_list %}
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:border-green-600 transition flex flex-col justify-between">
+
+            <div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-xl font-bold text-gray-800">
+                        {{ lapangan.nama }}
+                    </h3>
+
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                        {{ lapangan.get_jenis_display }}
+                    </span>
+                </div>
+
+                <p class="text-gray-600 text-sm mb-2">
+                    📍 {{ lapangan.lokasi }}
+                </p>
+
+                <p class="text-gray-500 text-sm mb-4">
+                    {{ lapangan.deskripsi|truncatechars:100 }}
+                </p>
+
+                <p class="text-green-700 font-bold mb-4">
+                    Mulai dari {{ lapangan.harga_format }} / jam
+                </p>
+            </div>
+
+            <a
+                href="{% url 'detail_jadwal' lapangan.id %}"
+                class="block text-center bg-green-700 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-800 transition"
+            >
+                Lihat Jadwal &amp; Tarif
+            </a>
+        </div>
+        {% empty %}
+        <p class="text-gray-500 col-span-full">
+            Belum ada data lapangan yang tersedia.
+        </p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

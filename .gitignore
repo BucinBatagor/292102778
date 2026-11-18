@@ -1,0 +1,15 @@
+# Virtual environment (buat ulang di tiap komputer)
+env/
+Env/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Database lokal (SQLite kosong, data utama ada di MariaDB)
+*.sqlite3
+
+# Pengaturan Claude / editor
+.claude/
+.vscode/

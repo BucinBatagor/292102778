@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Mini Soccer Cooper{% endblock %}</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-green-700 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <a href="{% url 'home' %}" class="font-bold text-lg">
+                MINI SOCCER COOPER
+            </a>
+
+            <div>
+                <a href="{% url 'home' %}"
+                   class="mx-3 hover:text-green-200">
+                    Home
+                </a>
+
+                <a href="{% url 'lapangan' %}"
+                   class="mx-3 hover:text-green-200">
+                    Lapangan
+                </a>
+
+                <a href="{% url 'pilih_lapangan' %}"
+                   class="mx-3 hover:text-green-200">
+                    Jadwal &amp; Tarif
+                </a>
+
+                <a href="{% url 'booking' %}"
+                   class="mx-3 hover:text-green-200">
+                    Booking
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Content -->
+    <main class="flex-1">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-6 text-center">
+            <p>
+                &copy; 2026 Mini Soccer Cooper
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

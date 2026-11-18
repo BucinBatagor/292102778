@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Barang</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background-color: #f3f4f6;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #1f2937;
+        }
+
+        .card {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 32px;
+        }
+
+        h2 {
+            margin: 0 0 24px;
+            font-size: 28px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #e5e7eb;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 14px 20px;
+            font-size: 15px;
+        }
+
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+
+        td {
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Daftar Barang</h2>
+
+        <table>
+            <tr>
+                <th>Kode</th>
+                <th>Nama Barang</th>
+                <th>Kategori</th>
+                <th>Stok</th>
+                <th>Harga Jual</th>
+            </tr>
+            {% for b in data %}
+            <tr>
+                <td>{{ b.kode_barang }}</td>
+                <td>{{ b.nama_barang }}</td>
+                <td>{{ b.kategori }}</td>
+                <td>{{ b.stok }}</td>
+                <td>Rp {{ b.harga_jual }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">Belum ada data barang</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
